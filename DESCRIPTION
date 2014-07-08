@@ -1,0 +1,12 @@
+Package: dsStats
+Maintainer: <datashield@obiba.org>
+Author: <datashield@obiba.org>
+Version: 3.0.0
+License: GPL-3
+Title: DataSHIELD statistical functions for server
+Description: DataSHIELD statistical functions for server
+AggregateMethods: t.test=stats::t.test,
+    varDS,
+    cor.test=stats::cor.test,
+    corDS,
+    covDS
