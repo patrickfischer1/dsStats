@@ -1,4 +1,4 @@
 dsStats
 =======
 
-DataSHIELD statistical functions for server
+DataSHIELD server site statistical functions
