@@ -10,3 +10,4 @@ AggregateMethods: t.test=stats::t.test,
     cor.test=stats::cor.test,
     corDS,
     covDS
+AssignMethods: attach=base::attach
