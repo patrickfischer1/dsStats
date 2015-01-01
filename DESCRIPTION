@@ -5,6 +5,8 @@ Version: 4.0.0
 License: GPL-3
 Title: DataSHIELD server site statistical functions
 Description: DataSHIELD server site statistical functions
+Depends:
+    dsBase
 AggregateMethods: t.test=stats::t.test,
     varDS,
     cor.test=stats::cor.test,
