@@ -1,3 +1,4 @@
 export(corDS)
 export(covDS)
+export(isValidDS)
 export(varDS)

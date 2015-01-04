@@ -10,7 +10,6 @@
 #'
 varDS <- function (xvect) {
   # check if the input vector is valid (i.e. meets DataSHIELD privacy criteria)
-  library(dsBase)
   check <- isValidDS(xvect)
   
   if(check){
