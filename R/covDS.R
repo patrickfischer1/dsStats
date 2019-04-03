@@ -37,9 +37,9 @@ covDS <-function (x=NULL, y=NULL, use=NULL){
     for(i in 1:dim(completeCount)[2]){
       for(j in i:dim(completeCount)[2]){
         if(i == j){
-          count <- sum(cmpCases[i])
+          count <- sum(cmpCases[i, ])
         }else{
-          count <- sum(cmpCases[i] & cmpCases[j])
+          count <- sum(cmpCases[i, ] & cmpCases[j, ])
         }
         completeCount[i,j] <- round(count,0)
         completeCount[j,i] <- round(count,0)
