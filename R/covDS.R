@@ -26,14 +26,23 @@ covDS <-function (x=NULL, y=NULL, use=NULL){
     output1 <- cov(x,use=todo)
     completeCount <- output1
     cls <- colnames(x)
+    
+    cmpCases <- matrix(ncol = dim(x)[1], nrow = dim(completeCount)[2])
+    
+    for(i in 1:dim(completeCount)[2]) {
+      
+      cmpCases[i, ] = complete.cases(x[, i])
+    }
+    
     for(i in 1:dim(completeCount)[2]){
-      for(j in 1:dim(completeCount)[2]){
+      for(j in i:dim(completeCount)[2]){
         if(i == j){
-          count <- length(which((complete.cases(x[,1])==TRUE)))
+          count <- sum(cmpCases[i])
         }else{
-          count <- length(which((complete.cases(cbind(x[,i], x[,j]))==TRUE)))
+          count <- sum(cmpCases[i] & cmpCases[j])
         }
         completeCount[i,j] <- round(count,0)
+        completeCount[j,i] <- round(count,0)
       }
     }
     output2 <- completeCount
